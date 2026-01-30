@@ -1,0 +1,6 @@
+# Crear módulo con scaffold usando la ruta absoluta al Python del entorno virtual
+/opt/odoo/odoo-env/bin/python3 /opt/odoo/odoo/odoo-bin scaffold prueba /opt/odoo/custom-addons/
+# Cambiar el dueño de los módulos para que odoo pueda leerlo
+sudo chown -R odoo:odoo /opt/odoo/custom-addons
+# encontrar el fichero de configuracion
+sudo find /opt/odoo -name odoo.conf | grep odoo.conf
