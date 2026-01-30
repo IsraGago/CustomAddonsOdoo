@@ -1,0 +1,33 @@
+<odoo>
+
+    <data>
+
+        <!-- Tree(list) View -->
+        <record id="instituto_curso_lista" model="ir.ui.view">
+            <field name="name">lista curso</field>
+            <field name="model">instituto.curso</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="description"/>
+                    <field name="is_done"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+   
+         
+        <record id="instituto_curso_action_window" model="ir.actions.act_window">
+            <field name="name">VentanaCursos</field>
+            <field name="res_model">instituto.curso</field>
+            <field name="view_mode">tree,form</field> 
+        </record>
+
+   
+        <menuitem id="instituto_curso_menu_root" name="Curso" />
+        <menuitem id="instituto_curso_menu_1" name="Curso 1" parent="instituto_curso_menu_root" action="instituto_curso_action_window" />
+        
+   
+    </data>    
+
+</odoo>
