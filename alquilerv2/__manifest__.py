@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "alquiler",
+    'name': "alquilerv2",
 
     'summary': "Sistema de alquiler de productos",
 
     'description': """
-        Módulo para gestionar el alquiler de productos, incluyendo clientes, productos y contratos de alquiler.
+Long description of module's purpose
     """,
 
-    'author': "Israel Gago",
-    'website': "https://www.agrotec.com",
+    'author': "Israel Benjamín Gago Acuña",
+    'website': "https://www.israelgago.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
@@ -18,13 +18,18 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','stock','product'],
 
     # always loaded
     "data": [
         "security/ir.model.access.csv",
-        "views/alquiler_producto_views.xml",
+        "views/alquiler_reserva_views.xml",
+        "views/templates.xml",
         "views/views.xml"
-    ]
+    ],
+    # only loaded in demonstration mode
+    'demo': [
+        'demo/demo.xml',
+    ],
 }
 

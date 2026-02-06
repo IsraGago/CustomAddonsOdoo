@@ -4,3 +4,9 @@
 sudo chown -R odoo:odoo /opt/odoo/custom-addons
 # encontrar el fichero de configuracion
 sudo find /opt/odoo -name odoo.conf | grep odoo.conf
+# meter el usuario alumno al grupo de odoo (hay que reiniciar la sesión)
+sudo usermod -aG odoo alumno
+#ver los grupos a los que pertenece un usuario
+groups alumno
+#dar permisos al grupo
+sudo chmod -R 775 /ruta

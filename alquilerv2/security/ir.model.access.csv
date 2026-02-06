@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_alquilerv2_alquilerv2,alquilerv2.alquilerv2,model_alquilerv2_alquilerv2,base.group_user,1,1,1,1
