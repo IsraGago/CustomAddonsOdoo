@@ -25,10 +25,16 @@ class Linea(models.Model):
     precio = fields.Float(string='Precio por día', required=True)
     subtotal = fields.Float(string='Subtotal', compute='_calcular_subtotal')
 
-    @api.depends('cantidad', 'precio')
-    def _calcular_subtotal(self):
-        for registro in self:
-            registro.subtotal = registro.cantidad * registro.precio * ((registro.alquiler_id.fecha_fin - registro.alquiler_id.fecha_inicio).days + 1)
+@api.depends('cantidad', 'precio', 'fecha_inicio', 'fecha_fin')
+def _calcular_subtotal(self):
+    for registro in self:
+        subtotal = 0.0
+        
+        if registro.fecha_inicio and registro.fecha_fin and registro.fecha_fin >= registro.fecha_inicio:
+            dias = (registro.fecha_fin - registro.fecha_inicio).days + 1
+            subtotal = registro.cantidad * registro.precio * dias
+            
+        registro.subtotal = subtotal
 
     @api.constrains('fecha_inicio', 'fecha_fin')
     def _check_fechas(self):
