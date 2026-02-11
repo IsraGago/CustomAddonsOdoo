@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_futbol_equipos,futbol.equipos,model_futbol_equipos,base.group_user,1,1,1,1
+access_futbol_entrenadores,futbol.entrenadores,model_futbol_entrenadores,base.group_user,1,1,1,1

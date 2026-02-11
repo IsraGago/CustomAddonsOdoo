@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+
+    <record id="view_equipos_form" model="ir.ui.view">
+      <field name="name">equipos.form</field>
+      <field name="model">futbol.equipos</field>
+      <field name="arch" type="xml">
+        <form string="Equipos">
+          <sheet>
+            <group>
+              <group>
+                <field name="nombre" />
+                <field name="ciudad" />
+              </group>
+              <group>
+                <field name="entrenador_id" />
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_equipos_tree" model="ir.ui.view">
+      <field name="name">equipos.tree</field>
+      <field name="model">futbol.equipos</field>
+      <field name="arch" type="xml">
+        <tree string="Equipos">
+          <field name="nombre" />
+          <field name="ciudad" />
+          <field name="entrenador_id" />
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_entrenadores_form" model="ir.ui.view">
+      <field name="name">entrenadores.form</field>
+      <field name="model">futbol.entrenadores</field>
+      <field name="arch" type="xml">
+        <form string="Entrenadores">
+          <sheet>
+            <group>
+              <group>
+                <field name="nombre" />
+                <field name="edad" />
+              </group>
+              <group>
+                <field name="equipo_id" />
+                <field name="fecha_alta" />
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_entrenadores_tree" model="ir.ui.view">
+      <field name="name">entrenadores.tree</field>
+      <field name="model">futbol.entrenadores</field>
+      <field name="arch" type="xml">
+        <tree string="Entrenadores">
+          <field name="nombre" />
+          <field name="edad" />
+          <field name="equipo_id" />
+          <field name="fecha_alta" />
+        </tree>
+      </field>
+    </record>
+
+    <record id="equipos_act_window" model="ir.actions.act_window">
+      <field name="name">equipos.window</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">futbol.equipos</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="entrenadores_act_window" model="ir.actions.act_window">
+      <field name="name">entrenadores.window</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">futbol.entrenadores</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="futbol" id="futbol.menu_root" />
+    <menuitem name="Entrenadores" id="entrenadores_menu" parent="futbol.menu_root"
+      action="entrenadores_act_window" />
+    <menuitem name="Equipos" id="equipos_menu" parent="futbol.menu_root" action="equipos_act_window" />
+
+
+  </data>
+</odoo>
