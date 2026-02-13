@@ -9,13 +9,12 @@
                     <sheet>
                         <group>
                             <group>
-                                
-                                <field name="nombre"/>     
-                                <field name="compania"/>
-                                <field name="compra"/>   
-                                <field name="km"/>   
-                                <field name="hangar"/>   
-                                                   
+                                <field name="nombre"/>
+                                <field name="matricula"/>
+                                <field name="fecha_compra"/>
+                                <field name="km"/>
+                                <field name="hangar"/>
+
                             </group>
                         </group>
                     </sheet>
@@ -28,18 +27,18 @@
             <field name="model">viajes.aeronaves</field>
             <field name="arch" type="xml">
                 <tree string="aeronaves">
-                       
-                       <field name="nombre"/>     
-                       <field name="compania"/>
-                       <field name="compra"/>   
-                       <field name="km"/>   
-                       <field name="hangar"/>    
-                                      
+                    <field name="nombre"/>
+                    <field name="matricula"/>
+                    <field name="fecha_compra"/>
+                    <field name="km"/>
+                    <field name="hangar"/>
+
+
                 </tree>
             </field>
         </record>
 
-   
+
         <record id="aeronaves_act_window" model="ir.actions.act_window">
             <field name="name">aeronaves.window</field>
             <field name="type">ir.actions.act_window</field>
@@ -48,5 +47,7 @@
         </record>
 
         
+
+
     </data>
 </odoo>

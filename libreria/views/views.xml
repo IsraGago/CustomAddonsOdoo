@@ -1,0 +1,55 @@
+<odoo>
+  <data>
+    <record id="view_libreria_form" model="ir.ui.view">
+      <field name="name">libreria.form</field>
+      <field name="model">libreria.libreria</field>
+      <field name="arch" type="xml">
+        <form string="Libreria">
+          <sheet>
+            <group>
+              <group>
+                <field name="name" />
+                <field name="rate" />
+                <field name="descripcion" />
+              </group>
+              <group>
+                <field name="codigo" />
+                <field name="fecha_fundacion" />
+                <field name="direccion" />
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_libreria_tree" model="ir.ui.view">
+      <field name="name">libreria.tree</field>
+      <field name="model">libreria.libreria</field>
+      <field name="arch" type="xml">
+        <tree string="Libreria">
+          <field name="name" />
+          <field name="codigo" />
+          <field name="rate" />
+          <field name="descripcion" />
+          <field name="fecha_fundacion" />
+          <field name="direccion" />
+        </tree>
+      </field>
+    </record>
+
+
+
+    <record id="librerias_act_window" model="ir.actions.act_window">
+      <field name="name">libreria.window</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">libreria.libreria</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+    <menuitem name="Libreria" id="libreria_menu_root"/>
+    <!-- menu categories -->
+    <menuitem name="Libreria" id="libreria_menu" parent="libreria_menu_root" action="librerias_act_window" />
+  </data>
+</odoo>

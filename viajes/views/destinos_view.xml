@@ -12,7 +12,7 @@
                                 <field name="matricula"/>   
                                 <field name="origen"/>     
                                 <field name="destino"/>
-                                <field name="fechavuelo"/>                              
+                                <field name="fecha_vuelo"/>                              
                             </group>
                         </group>
                     </sheet>
@@ -28,7 +28,7 @@
                     <field name="matricula"/>   
                     <field name="origen"/>     
                     <field name="destino"/>
-                    <field name="fechavuelo"/>       
+                    <field name="fecha_vuelo"/>       
                 </tree>
             </field>
         </record>

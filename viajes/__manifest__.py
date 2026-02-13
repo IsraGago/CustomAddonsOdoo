@@ -3,7 +3,7 @@
     "summary": "Herramienta para gestionar Viajes",  # Module subtitle phrase
     "description": "Herramienta para manejar los Viajes",  # Supports reStructuredText(RST) format (description is Deprecated)
     "version": "17.0.1.0.0",
-    "author": "Juan Maria Sanchez Curto",
+    "author": "Israel Benjamín Gago Acuña",
     "category": "Tools",    
     "license": "AGPL-3",
     "depends": ["base"], #Modulos con los que voy a interactuar
